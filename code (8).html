@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jagannath Rath Yatra 2025 Blessings</title>
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <meta property="og:title" content="Jagannath Rath Yatra 2025 - Divine Blessings For You!" />
+    <meta property="og:description" content="Click here to receive special blessings from Lord Jagannath on this auspicious occasion." />
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Jagannath_Puri_Mandir_2.jpg/1024px-Jagannath_Puri_Mandir_2.jpg" />
+    <meta property="og:type" content="website" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        :root {
+            --primary-color: #FF6700;
+            --secondary-color: #DAA520;
+            --text-color: #333;
+            --bg-color: #FFF8E1;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* --- THIS IS THE NEW, BULLETPROOF STRUCTURE --- */
+        #landing-wrapper {
+            height: 100vh;
+            position: relative; /* The positioning context for all layers */
+            overflow: hidden;
+        }
+
+        /* Layer 1: The Background Image */
+        #landing-background {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('bg.png');
+            background-size: cover;
+            background-position: center;
+            z-index: 0; /* At the very bottom */
+        }
+
+        /* Layer 2: The Fireworks Canvas Container */
+        #fireworks-layer {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 1; /* Sits on top of the background */
+        }
+
+        /* Layer 3: The User Interface (Buttons, etc.) */
+        #ui-layer {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 2; /* Sits on top of the fireworks */
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        
+        .scroll-indicator {
+            padding: 10px 20px;
+            margin-bottom: 30px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 1em;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+        
+        /* Section 2: Main Content Area (remains the same) */
+        .content-section {
+            padding: 50px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #2c0e08, #1e0905);
+        }
+
+        .container {
+            background-color: white;
+            padding: 25px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            border-top: 10px solid var(--primary-color);
+        }
+        .header img { width: 150px; height: auto; border-radius: 50%; border: 4px solid var(--secondary-color); margin-bottom: 15px; }
+        h1 { color: var(--primary-color); font-size: 2.2em; margin: 0 0 10px 0; font-weight: 700; }
+        .sub-heading { font-size: 1.1em; color: #555; margin-bottom: 20px; }
+        #blessing-message { background-color: #FFF3E0; color: var(--primary-color); padding: 15px; border-radius: 8px; font-size: 1.2em; font-weight: 600; margin: 25px 0; border-left: 5px solid var(--primary-color); }
+        #blessing-message b { color: #D35400; }
+        .blessing-text { font-size: 1.1em; line-height: 1.6; color: #444; }
+        .share-form { margin-top: 30px; padding-top: 20px; border-top: 1px dashed var(--secondary-color); }
+        label { font-weight: 600; font-size: 1.1em; display: block; margin-bottom: 10px; }
+        input[type="text"] { width: calc(100% - 24px); padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em; margin-bottom: 15px; transition: border-color 0.3s; }
+        input[type="text"]:focus { outline: none; border-color: var(--primary-color); }
+        #shareBlessingsBtn { background-color: var(--primary-color); color: white; border: none; padding: 14px 25px; border-radius: 8px; font-size: 1.2em; font-weight: 600; cursor: pointer; transition: background-color 0.3s, transform 0.2s; width: 100%; box-sizing: border-box; }
+        #shareBlessingsBtn:hover { background-color: #E65100; transform: translateY(-2px); }
+        #fallback-section { margin-top: 20px; padding: 15px; background-color: #f9f9f9; border-radius: 8px; }
+        #fallback-section p { font-size: 0.9em; color: #666; margin-top: 0; }
+        .fallback-buttons { display: flex; gap: 10px; justify-content: center; }
+        .fallback-buttons button, .fallback-buttons a { flex-grow: 1; text-decoration: none; margin: 0; padding: 10px 15px; font-size: 1em; border-radius: 5px; cursor: pointer; border: none; color: white; font-weight: 500; }
+        #copy-btn { background-color: #3498DB; }
+        #whatsapp-btn { background-color: #25D366; }
+        footer { margin-top: 25px; font-size: 0.9em; color: #777; }
+    </style>
+</head>
+<body>
+
+    <div id="landing-wrapper">
+        <div id="landing-background"></div>
+        <div id="fireworks-layer"></div>
+        <div id="ui-layer">
+            <a href="#content" class="scroll-indicator">Scroll for Blessings &darr;</a>
+        </div>
+    </div>
+
+    <div class="content-section" id="content">
+        <div class="container">
+            <div class="header">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Jagannath%2C_Balabhadra_and_Subhadra_at_ISKCON_Mayapur_-_India.jpg" alt="Lord Jagannath">
+            </div>
+            <h1>जय जगन्नाथ!</h1>
+            <p class="sub-heading">Jagannath Rath Yatra 2025</p>
+            <div id="blessing-message"></div>
+            <p class="blessing-text">
+                May Lord Jagannath, the Lord of the Universe, bless you with abundant happiness, peace, and prosperity. May your life be filled with divine light and joy.
+            </p>
+            <div class="share-form">
+                <label for="userName">Apna naam likhein aur aashirwad share karein:</label>
+                <input type="text" id="userName" placeholder="Yahan apna naam likhein...">
+                <button id="shareBlessingsBtn">Aashirwad Share Karein 🙏</button>
+                <div id="fallback-section" style="display: none;">
+                    <p>Aapka browser direct sharing support nahi karta. Kripya neeche diye gaye options ka upyog karein:</p>
+                    <div class="fallback-buttons">
+                        <button id="copy-btn">Copy Link</button>
+                        <a id="whatsapp-btn" href="#" target="_blank">Share on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                Jai Jagannath Swami, Nayan Path Gami, Bhavatu Me.
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // --- 1. Main Website Logic ---
+        window.onload = function() {
+            const blessingMessageElement = document.getElementById('blessing-message');
+            const urlParams = new URLSearchParams(window.location.search);
+            const senderName = urlParams.get('from');
+            if (senderName) {
+                const decodedSenderName = decodeURIComponent(senderName.replace(/\+/g, ' '));
+                blessingMessageElement.innerHTML = `<b>${decodedSenderName}</b> ne aapke liye prarthna ki hai aur Jagannath ji ka aashirwad bheja hai! ✨`;
+            } else {
+                blessingMessageElement.innerHTML = 'Aapko Jagannath Rath Yatra 2025 ki hardik shubhkamnayein! 🙏';
+            }
+        };
+        const shareBtn = document.getElementById('shareBlessingsBtn'), userNameInput = document.getElementById('userName'), fallbackSection = document.getElementById('fallback-section'), copyBtn = document.getElementById('copy-btn'), whatsappBtn = document.getElementById('whatsapp-btn');
+        shareBtn.addEventListener('click', async () => {
+            const name = userNameInput.value.trim(); if (name === "") { alert("Kripya apna naam likhein!"); return; }
+            const encodedName = encodeURIComponent(name), baseUrl = window.location.origin + window.location.pathname, shareUrl = `${baseUrl}?from=${encodedName}`, shareData = { title: 'Jagannath Rath Yatra Blessings!', text: `${name} ne aapke liye Jagannath ji ka aashirwad bheja hai! 🙏`, url: shareUrl };
+            if (navigator.share) { try { await navigator.share(shareData); } catch (err) { console.log("Share cancelled:", err.message); } } else { const whatsappMessage = encodeURIComponent(`${shareData.text}\n\n${shareData.url}`); whatsappBtn.href = `https://api.whatsapp.com/send?text=${whatsappMessage}`; fallbackSection.style.display = 'block'; }
+        });
+        copyBtn.addEventListener('click', function() {
+            const linkToCopy = `${window.location.origin}${window.location.pathname}?from=${encodeURIComponent(userNameInput.value.trim())}`;
+            navigator.clipboard.writeText(linkToCopy).then(() => { copyBtn.textContent = 'Copied!'; setTimeout(() => { copyBtn.textContent = 'Copy Link'; }, 2000); }).catch(err => { alert('Could not copy link.'); });
+        });
+
+        // --- 2. Fireworks Library (fireworks-js) - self contained ---
+        /*! @fireworks-js/fireworks v2.10.7 (c) 2024 Vitalij Ry'bka, MIT License */
+        !function(t,i){"object"==typeof exports&&"undefined"!=typeof module?module.exports=i():"function"==typeof define&&define.amd?define(i):(t="undefined"!=typeof globalThis?globalThis:t||self).Fireworks=i()}(this,(function(){"use strict";function t(t,i,e){return t<i?i:t>e?e:t}function i(t,i){return Math.random()*(i-t)+t}function e(t){return t[Math.floor(i(0,t.length))]}function s(t,i,e,s,o){return s+(t-i)/(e-i)*(o-s)}function o(t,i,e){const s=i-t,o=e-i;if(s>Math.PI)return t+2*Math.PI;if(s<-Math.PI)return t-2*Math.PI;if(o>Math.PI)return i-2*Math.PI;if(o<-Math.PI)return i+2*Math.PI;const n=Math.abs(s)<Math.abs(o)?i:e,h=Math.abs(s)<Math.abs(o)?s:o;return n+.5*h}var n=Object.freeze({__proto__:null,clamp:t,randomFloat:i,randomInt:function(t,e){return Math.floor(i(t,e))},randomItem:e,map:s,lerp:function(t,i,e){return t+(i-t)*e},angle:function(t,i){const e=i.x-t.x,s=i.y-t.y;return Math.atan2(s,e)},lerpAngle:o,distance:function(t,i){return Math.hypot(t.x-i.x,t.y-i.y)}});class h{constructor(t={x:0,y:0},i={x:0,y:0}){this.pos=t,this.vel=i}move(t,i,e,s,o,n){this.vel.x*=t,this.vel.y*=t,this.vel.y+=i,this.pos.x+=this.vel.x,this.pos.y+=this.vel.y,this.pos.x>e&&o?this.pos.x=s:this.pos.x<s&&o?this.pos.x=e:this.pos.y<n&&(this.pos.y=n)}}class r{constructor(t){this.hue=i(t.hue.min,t.hue.max),this.options=t,this.ctx=t.ctx,this.rocketsPoint=t.rocketsPoint}explosion(t){let i=this.options.particles,s=0;const o=2*Math.PI/i;for(;i--;)setTimeout((()=>{s+=o,this.createParticle(t,s)}),i*this.options.explosionDelay)}createParticle(i,s){const o=new h(i),{particles:n,friction:r,gravity:a,explosion:l}=this.options,c={min:this.hue-10,max:this.hue+10};o.vel.x=Math.cos(s)*t(Math.random(),.1,l),o.vel.y=Math.sin(s)*t(Math.random(),.1,l);const d=new p({x:o.pos.x,y:o.pos.y},{x:o.vel.x,y:o.vel.y},this.ctx,n,r,a,c);n.push(d)}launch(){const t=this.options.boundaries.width/2,s={x:i(t-200,t+200),y:this.options.boundaries.height};this.createRocket(s)}createRocket(t){const i=new h(t);i.vel.y=this.rocketsPoint.y,i.vel.x=this.rocketsPoint.x;const e=new a({x:i.pos.x,y:i.pos.y},{x:i.vel.x,y:i.vel.y},this.ctx,this.options.rockets,this.options.friction,this.options.gravity,this.options.trace,this.hue);this.options.rockets.push(e)}}class a extends h{constructor(t,i,e,s,o,n,h,a){super(t,i),this.ctx=e,this.rockets=s,this.friction=o,this.gravity=n,this.hue=a,this.trace=h,this.explosion=new r({particles:this.rockets,...this.trace,hue:{min:this.hue-10,max:this.hue+10}})}draw(){const t=this.pos.x,i=this.pos.y,e=o(this.old.x,this.pos.x,this.friction),s=o(this.old.y,this.pos.y,this.friction);this.ctx.lineWidth=this.trace.thickness,this.ctx.beginPath(),this.ctx.moveTo(e,s),this.ctx.lineTo(t,i),this.ctx.strokeStyle=`hsl(${this.hue}, 100%, 50%)`,this.ctx.stroke(),this.old={x:t,y:i}}update(){super.move(this.friction,this.gravity),this.old||(this.old={x:this.pos.x,y:this.pos.y}),this.draw();const t=Math.atan2(this.vel.y,this.vel.x)+Math.PI/2;this.ctx.save(),this.ctx.translate(this.pos.x,this.pos.y),this.ctx.rotate(t),this.ctx.scale(1,this.trace.size),this.ctx.beginPath(),this.ctx.moveTo(0,-2),this.ctx.lineTo(2,2),this.ctx.lineTo(-2,2),this.ctx.closePath(),this.ctx.fillStyle=`hsl(${this.hue}, 100%, 50%)`,this.ctx.fill(),this.ctx.restore()}}class p extends h{constructor(t,i,e,s,o,n,h){super(t,i),this.ctx=e,this.particles=s,this.friction=o,this.gravity=n,this.hue=i(h.min,h.max),this.size=Math.round(i(1,3)),this.alpha=1}draw(){this.ctx.beginPath(),this.ctx.arc(this.pos.x,this.pos.y,this.size,0,2*Math.PI),this.ctx.fillStyle=`hsla(${this.hue}, 100%, 50%, ${this.alpha})`,this.ctx.fill()}update(){super.move(this.friction,this.gravity),this.alpha-=1/(100/this.friction),this.draw()}}class l{constructor(i,e){this.target=i,this.container=e,this.buffer=[i];const s=new ResizeObserver((()=>this.resize()));s.observe(i),this.resize();const o=t=>this.onPointerMove(t),n=t=>this.onPointerDown(t),h=()=>this.onPointerUp();"undefined"!=typeof window&&("ontouchstart"in window||navigator.maxTouchPoints||navigator.msMaxTouchPoints?(i.addEventListener("touchstart",n),i.addEventListener("touchmove",o),i.addEventListener("touchend",h)):(i.addEventListener("mousedown",n),i.addEventListener("mousemove",o),i.addEventListener("mouseup",h),i.addEventListener("mouseleave",h)))}get mouse(){return{x:this.x,y:this.y,isDown:this.isDown}}onPointerDown(t){t.preventDefault(),this.isDown=!0,this.onPointerMove(t)}onPointerMove(t){const i=t.touches?.[0]??t;this.x=i.clientX,this.y=i.clientY,this.buffer.length>2&&this.buffer.shift(),this.buffer.push({x:this.x,y:this.y})}onPointerUp(){this.isDown=!1}get a(){const t=this.container.getBoundingClientRect();return this.buffer.map((i=>({x:i.x-t.left,y:i.y-t.top})))}resize(){const t=this.target.getBoundingClientRect();this.cw=t.width,this.ch=t.height,this.target.width=t.width,this.target.height=t.height}useMouse(i,e){const s=this.mouse;i&&s.isDown&&e(s)}useAvg(t){t(this.a)}useDelta(i){const e=this.a,s=e[0],o=e[e.length-1];t(s,o)&&i(n.angle(s,o))}useShift(i){t(this.a[0],this.a[1])&&i(this.mouse)}}const c={x:0,y:0};class d{constructor(i,e){var s;this.container=i,this.opts=e,{autoresize:s=!0,boundaries:o,mouse:h,delay:r,brightness:a,rockets:p,explosion:d,friction:u,gravity:m,particles:f,trace:x,hue:g,sound:w}=e,this.running=!0,this.canvas=document.createElement("canvas"),this.ctx=this.canvas.getContext("2d"),this.container.appendChild(this.canvas),this.sound=new(customElements.get("fireworks-sound")??w)(w),this.resize=new l(this.canvas,this.container),this.mouse=new(customElements.get("fireworks-mouse")??h)(this.canvas,this.container),this.boundaries=o,this.delay=r,this.brightness=a,this.rockets=p,this.explosion=d,this.friction=u,this.gravity=m,this.particles=f,this.trace=x,this.hue=g,this.rockets=p,this.updateBoundaries(this.resize),this.rocketsPoint=this.getRocketPoint(),s&&this.resize.observe((()=>this.updateBoundaries(this.resize))),this.tick()}get isRunning(){return this.running}get isStarted(){return this.running}get boundaries(){return this._boundaries}set boundaries(t){this._boundaries=t,this.updateBoundaries(this.resize)}get delay(){return this._delay}set delay(t){this._delay={...this._delay,...t}}get brightness(){return this._brightness}set brightness(t){this._brightness={...this._brightness,...t}}get rockets(){return this._rockets}set rockets(t){this._rockets={...t,value:[]}}get explosion(){return this._explosion}set explosion(t){this._explosion=t}get friction(){return this._friction}set friction(t){this._friction=t}get gravity(){return this._gravity}set gravity(t){this._gravity=t}get particles(){return this._particles}set particles(t){this._particles={...t,value:[]}}get trace(){return this._trace}set trace(t){this._trace={...this._trace,value:[]}}get hue(){return this._hue}set hue(t){this._hue={...this._hue,...t}}get mouse(){return this._mouse}set mouse(t){this._mouse={...this._mouse,...t}}get sound(){return this._sound}set sound(t){this._sound={...this.sound,...t}}start(){this.running||(this.running=!0,this.tick())}stop(){this.running&&(this.running=!1,this.clear())}toggle(){this.running=!this.running,this.running&&this.tick()}clear(){this.ctx&&(this.rockets.value=[],this.particles.value=[],this.trace.value=[],this.ctx.clearRect(0,0,this.resize.cw,this.resize.ch))}updateBoundaries(t){this.boundaries={width:t.cw,height:t.ch,x:0,y:0,...this.boundaries}}getRocketPoint(){const t=this.mouse.mouse,i=this.boundaries;return c.x=t.x??i.width/2,c.y=t.y??i.height*.2,c}render(e,s,o){const n=this.ctx,h=this.boundaries,{min:r,max:a}=this.brightness;n.globalCompositeOperation="destination-out",n.fillStyle=`rgba(0, 0, 0, ${s-t(this.brightness.value,r,a)})`,n.fillRect(0,0,h.width,h.height),n.globalCompositeOperation="lighter",o(n)}tick=()=>{if(!this.ctx||!this.running)return;this.render(this.ctx,this.brightness.decay,(()=>{if(this.mouse.click&&this.mouse.isDown){const t=new r({ctx:this.ctx,rockets:this.rockets.value,particles:this.particles.value,friction:this.friction,gravity:this.gravity,hue:this.hue,explosion:this.explosion,rocketsPoint:this.rocketsPoint}),i=this.mouse.mouse;i.x&&i.y&&(this.rocketsPoint.x=i.x,this.rocketsPoint.y=i.y,this.sound.play(),t.launch())}if(i(1,100)>this.rockets.amount)return;const t=new r({ctx:this.ctx,rockets:this.rockets.value,particles:this.particles.value,friction:this.friction,gravity:this.gravity,hue:this.hue,explosion:this.explosion,rocketsPoint:this.rocketsPoint});this.sound.play(),t.launch()})),this.trace.value.forEach(((t,i)=>{t.update(),t.alpha<0&&this.trace.value.splice(i,1)})),this.rockets.value.forEach(((t,i)=>{t.update(),(t.pos.y<this.rocketsPoint.y||t.alpha<=0||t.pos.y>this.boundaries.height)&&(this.rockets.value.splice(i,1),t.explosion.explosion(t.pos))})),this.particles.value.forEach(((t,i)=>{t.update(),t.alpha<0&&this.particles.value.splice(i,1)})),requestAnimationFrame(this.tick)}}class u extends HTMLElement{constructor(t){super(),this.opts=t}connectedCallback(){this.style.display="none",this.isPlayed=!1,this.audio=new Audio,this.audio.src=this.opts.files[0]}play(){this.opts.enabled&&!this.isPlayed&&(this.isPlayed=!0,this.audio.src=e(this.opts.files),this.audio.volume=i(this.opts.volume.min,this.opts.volume.max),this.audio.play()),this.audio.onended=()=>{this.isPlayed=!1}}}class m extends HTMLElement{constructor(t){super(),this.target=t,this.onPointerMove=this.onPointerMove.bind(this),this.onPointerDown=this.onPointerDown.bind(this),this.onPointerUp=this.onPointerUp.bind(this)}get isDown(){return this._isDown}connectedCallback(){"ontouchstart"in window||navigator.maxTouchPoints||navigator.msMaxTouchPoints?(this.target.addEventListener("touchstart",this.onPointerDown),this.target.addEventListener("touchmove",this.onPointerMove),this.target.addEventListener("touchend",this.onPointerUp)):(this.target.addEventListener("mousedown",this.onPointerDown),this.target.addEventListener("mousemove",this.onPointerMove),this.target.addEventListener("mouseup",this.onPointerUp),this.target.addEventListener("mouseleave",this.onPointerUp))}onPointerDown(t){t.preventDefault(),this._isDown=!0,this.onPointerMove(t)}onPointerMove(t){const i=t.touches?.[0]??t;this.x=i.clientX,this.y=i.clientY}onPointerUp(){this._isDown=!1}}return class{constructor(t,i={}){if(this.container=t,this.options=i,this.container){var e,s,o,n,h,r,a,p,l,c,x,g,w,b,y,v,k,_,S;this.options={autoresize:(e=this.options.autoresize)??!0,mouse:(s=this.options.mouse)??{click:!1,move:!1,max:1},delay:(o=this.options.delay)??{min:15,max:30},brightness:(n=this.options.brightness)??{min:50,max:80,decay:1.015},rockets:(h=this.options.rockets)??{speed:2,amount:50,particles:50,size:3},explosion:(r=this.options.explosion)??5,friction:(a=this.options.friction)??.95,gravity:(p=this.options.gravity)??1.5,particles:(l=this.options.particles)??90,trace:(c=this.options.trace)??{speed:10,size:1},hue:(x=this.options.hue)??{min:0,max:360},sound:(g=this.options.sound)??{},...this.options},this.options.sound={enabled:(w=this.options.sound.enabled)??!1,files:(b=this.options.sound.files)??["https://fireworks.js.org/sounds/explosion0.mp3","https://fireworks.js.org/sounds/explosion1.mp3","https://fireworks.js.org/sounds/explosion2.mp3"],volume:(y=this.options.sound.volume)??{min:4,max:8},...this.options.sound},customElements.get("fireworks-sound")||customElements.define("fireworks-sound",(v=this.options.sound,k=class extends u{constructor(){super(v)}},k)),customElements.get("fireworks-mouse")||customElements.define("fireworks-mouse",(S=this.options.mouse,_=class extends m{constructor(){super(S)}},_)),this.fireworks=new d(this.container,this.options)}else console.error("Container not found.")}get isRunning(){return this.fireworks.isRunning}get isStarted(){return this.fireworks.isStarted}start(){this.fireworks.start()}stop(){this.fireworks.stop()}toggle(){this.fireworks.toggle()}clear(){this.fireworks.clear()}updateOptions(t){this.options=Object.assign(this.options,t),this.fireworks&&Object.assign(this.fireworks,this.options)}}}));
+        
+        // --- 3. Realistic Fireworks Initialization ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const fireworksLayer = document.querySelector('#fireworks-layer');
+            if (fireworksLayer) {
+                const fireworks = new Fireworks(fireworksLayer, {
+                    autoresize: true,
+                    opacity: 0.7,
+                    acceleration: 1.04,
+                    friction: 0.97,
+                    gravity: 1.5,
+                    particles: 90,
+                    traceSpeed: 3,
+                    explosion: 6,
+                    intensity: 30,
+                    mouse: { click: true, move: false, max: 1 },
+                    hue: { min: 0, max: 55 },
+                    sound: {
+                        enabled: true,
+                        files: [
+                            'https://fireworks.js.org/sounds/explosion0.mp3',
+                            'https://fireworks.js.org/sounds/explosion1.mp3',
+                            'https://fireworks.js.org/sounds/explosion2.mp3'
+                        ],
+                        volume: { min: 4, max: 8 }
+                    }
+                });
+                fireworks.start();
+            }
+        });
+    </script>
+</body>
+</html>
