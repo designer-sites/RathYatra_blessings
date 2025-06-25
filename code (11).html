@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>রথযাত্রা ২০২৫</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&family=Hind+Siliguri:wght@400;500&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 100%; height: 100%; overflow: hidden; background: radial-gradient(ellipse at center, #2c1a0a 0%, #000000 70%); font-family: 'Hind Siliguri', sans-serif; }
+
+        /* CHANGE: New container for the personalized greeting */
+        #greeting-container {
+            display: none; /* Initially hidden */
+            position: absolute;
+            top: 2vh;
+            width: 100%;
+            text-align: center;
+            z-index: 10;
+        }
+        #greeting-container h2 {
+            font-size: 1.5rem;
+            color: #ffc107;
+            text-shadow: 0 0 5px #ff9800;
+            padding: 0 10px;
+        }
+
+        .poster-container {
+            position: relative;
+            z-index: 2; 
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Centered again to make space at top and bottom */
+            width: 100%;
+            height: 100%;
+        }
+
+        .poster-image {
+            max-width: 90vw;
+            max-height: 70vh; /* Reduced height to make space for name box */
+            object-fit: contain;
+            border-radius: 20px;
+            animation: red-orange-glow 5s ease-in-out infinite, floating-effect 6s ease-in-out infinite;
+        }
+
+        #flower-shower-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 5; pointer-events: none; }
+        .flower { position: absolute; top: -10%; background-size: contain; background-repeat: no-repeat; animation-name: fall; animation-timing-function: linear; animation-iteration-count: infinite; }
+        
+        #entry-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); color: #fff; display: flex; justify-content: center; align-items: center; flex-direction: column; z-index: 100; cursor: pointer; transition: opacity 0.8s ease; }
+        #entry-overlay h1 { font-family: 'Tiro Bangla', serif; font-size: 4rem; font-weight: 400; color: #ffeb3b; text-shadow: 0 0 8px #ffc107, 0 0 15px #ff9800; margin-bottom: 20px; }
+        #entry-overlay p { font-family: 'Hind Siliguri', sans-serif; font-size: 1.3rem; color: #f1f1f1; letter-spacing: 1px; animation: pulse-effect 2s infinite ease-in-out; }
+
+        /* CHANGE: New styles for the Share Box */
+        .share-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            z-index: 10;
+        }
+        #name-input {
+            width: 80%;
+            max-width: 300px;
+            padding: 12px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid #ff9800;
+            border-radius: 25px;
+            text-align: center;
+            outline: none;
+            transition: box-shadow 0.3s;
+        }
+        #name-input::placeholder { color: #ccc; }
+        #name-input:focus { box-shadow: 0 0 15px #ffc107; }
+
+        #share-button {
+            width: 80%;
+            max-width: 300px;
+            padding: 12px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: white;
+            background: linear-gradient(45deg, #ff4800, #ff8c00);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        #share-button:active {
+            transform: scale(0.98);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        /* Animations */
+        @keyframes fall { from { transform: translateY(0) rotateZ(0deg); opacity: 1; } to { transform: translateY(110vh) rotateZ(360deg); opacity: 0; } }
+        @keyframes red-orange-glow { 0%, 100% { filter: drop-shadow(0 0 15px hsl(0, 100%, 50%)) drop-shadow(0 0 30px hsl(0, 100%, 50%)); } 50% { filter: drop-shadow(0 0 20px hsl(35, 100%, 55%)) drop-shadow(0 0 40px hsl(35, 100%, 55%)); } }
+        @keyframes floating-effect { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
+        @keyframes pulse-effect { 0%, 100% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.05); opacity: 1; } }
+    </style>
+</head>
+<body>
+
+    <div id="entry-overlay">
+        <h1>রথযাত্রা ২০২৫</h1>
+        <p>প্রবেশ করতে আলতো চাপ দিন</p>
+    </div>
+
+    <!-- Container for personalized greeting (initially hidden) -->
+    <div id="greeting-container">
+        <h2 id="sender-greeting"></h2>
+    </div>
+
+    <div class="poster-container">
+        <img src="Rathyatra2025.png" alt="Rathyatra 2025 Poster" class="poster-image">
+    </div>
+
+    <div id="flower-shower-container"></div>
+    
+    <!-- Input box and Share button -->
+    <div class="share-container">
+        <input type="text" id="name-input" placeholder="আপনার নাম লিখুন">
+        <button id="share-button">শেয়ার করুন</button>
+    </div>
+
+    <audio id="flute-sound" src="sfx/Flute.mp3" loop></audio>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // All elements
+            const container = document.getElementById('flower-shower-container');
+            const overlay = document.getElementById('entry-overlay');
+            const fluteSound = document.getElementById('flute-sound');
+            const shareButton = document.getElementById('share-button');
+            const nameInput = document.getElementById('name-input');
+            const greetingContainer = document.getElementById('greeting-container');
+            const senderGreeting = document.getElementById('sender-greeting');
+
+            // --- CHANGE: Check for sender's name in URL when page loads ---
+            const urlParams = new URLSearchParams(window.location.search);
+            const senderName = urlParams.get('name');
+
+            if (senderName) {
+                // If a name is found in the URL, display the greeting
+                senderGreeting.textContent = `${decodeURIComponent(senderName)} আপনাকে রথযাত্রার শুভেচ্ছা পাঠিয়েছেন!`;
+                greetingContainer.style.display = 'block';
+            }
+
+            // Flower creation function (unchanged)
+            const flowerImages = ['f1.png','f2.png','f3.png','f4.png','f5.png','f6.png','f7.png','f8.png'];
+            const numberOfFlowers = 60;
+            function createFlower() {
+                const flower = document.createElement('div');
+                flower.classList.add('flower');
+                const randomFlower = flowerImages[Math.floor(Math.random() * flowerImages.length)];
+                flower.style.backgroundImage = `url('flower_pngs/${randomFlower}')`;
+                flower.style.left = Math.random() * 100 + 'vw';
+                const size = Math.random() * 20 + 10;
+                flower.style.width = size + 'px';
+                flower.style.height = size + 'px';
+                const duration = Math.random() * 6 + 7;
+                flower.style.animationDuration = duration + 's';
+                const delay = Math.random() * 5;
+                flower.style.animationDelay = delay + 's';
+                container.appendChild(flower);
+                setTimeout(() => { flower.remove(); createFlower(); }, (duration + delay) * 1000);
+            }
+
+            // Entry overlay click event (unchanged)
+            overlay.addEventListener('click', () => {
+                overlay.style.opacity = '0';
+                setTimeout(() => { overlay.style.display = 'none'; }, 800);
+                fluteSound.volume = 1.0;
+                fluteSound.play();
+                for (let i = 0; i < numberOfFlowers; i++) { createFlower(); }
+            });
+
+            // --- CHANGE: Share Button Click Logic ---
+            shareButton.addEventListener('click', async () => {
+                const name = nameInput.value.trim();
+                if (!name) {
+                    alert('দয়া করে আপনার নাম লিখুন।');
+                    return;
+                }
+
+                // Construct the shareable URL with the name parameter
+                const baseUrl = window.location.origin + window.location.pathname;
+                const shareUrl = `${baseUrl}?name=${encodeURIComponent(name)}`;
+
+                const shareData = {
+                    title: 'রথযাত্রার শুভেচ্ছা!',
+                    text: `${name} আপনাকে রথযাত্রার আন্তরিক শুভেচ্ছা জানাচ্ছেন। এই লিঙ্কটিতে ক্লিক করে দেখুন!`,
+                    url: shareUrl
+                };
+
+                try {
+                    // Check if the browser supports the share API
+                    if (navigator.share) {
+                        await navigator.share(shareData);
+                        console.log('Successfully shared');
+                    } else {
+                        // Fallback for browsers that don't support it (e.g., desktop)
+                        alert('আপনার ব্রাউজার এই ফিচারটি সাপোর্ট করে না। লিঙ্কটি কপি করে শেয়ার করতে পারেন।');
+                    }
+                } catch (err) {
+                    console.error('Share failed:', err);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
